@@ -1,4 +1,4 @@
-# HelloPipeling
+# Hello Pipeline
 ### Shader description
 Basic graphics pipeline shader, take into position of vert, draw a white triangle.
 
@@ -65,7 +65,7 @@ For some reasons, the shader wait for all waves to stop after those opeartions.
   s_sendmsg     sendmsg(MSG_GS_ALLOC_REQ, GS_OP_NOP, 0)
 ```
 In the first wave in subgroup, the shader request some GS space.  
-Accordint to the ISA guide, the s1 register store the *number of primitives*, the s2 register store the number of vertices.  
+Accordint to the ISA guide, the s1 register store the *number of primitives*, the s2 register store the *number of vertices*.  
 
 #### Prim export
 ```
