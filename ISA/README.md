@@ -9,3 +9,4 @@ rga version: 2.3.1.0
 |Directory|Description|
 |-|-|
 |HelloPipeline|Basis graphics pipeline. First look on how basis shader is executed in GPU.|
+|AttributeInterpolation|Pixel shader input interpolation.|
