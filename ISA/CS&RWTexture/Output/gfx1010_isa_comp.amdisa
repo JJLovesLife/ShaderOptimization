@@ -1,0 +1,89 @@
+; -------- Disassembly --------------------
+shader main
+  asic(GFX10)
+  type(CS)
+  sgpr_count(14)
+  vgpr_count(8)
+  wave_size(64)
+
+  s_inst_prefetch  0x0003                               // 000000000000: BFA00003
+  s_getpc_b64   s[0:1]                                  // 000000000004: BE801F80
+  s_and_b32     s0, s5, lit(0x00ffffff)                 // 000000000008: 8700FF05 00FFFFFF
+  v_mad_u32_u24  v2, s3, 16, v0                         // 000000000010: D5430002 04012003
+  v_mad_u32_u24  v1, s4, 8, v1                          // 000000000018: D5430001 04051004
+  s_mov_b32     s3, s1                                  // 000000000020: BE830301
+  v_mov_b32     v6, 0                                   // 000000000024: 7E0C0280
+  s_load_dwordx8  s[4:11], s[2:3], null                 // 000000000028: F40C0101 FA000000
+  s_waitcnt     lgkmcnt(0)                              // 000000000030: BF8CC07F
+  image_load    v[3:4], [v2,v1], s[4:11] dmask:0x5 dim:SQ_RSRC_IMG_2D // 000000000034: F000050A 00010302 00000001
+  s_waitcnt     vmcnt(0)                                // 000000000040: BF8C3F70
+  v_mov_b32     v5, v4                                  // 000000000044: 7E0A0304
+  v_mov_b32     v4, s0                                  // 000000000048: 7E080200
+  image_store   v[3:6], [v2,v1], s[4:11] dmask:0xf dim:SQ_RSRC_IMG_2D unorm glc // 00000000004C: F0203F0A 00010302 00000001
+  s_endpgm                                              // 000000000058: BF810000
+  s_code_end                                            // 00000000005C: BF9F0000
+  s_code_end                                            // 000000000060: BF9F0000
+  s_code_end                                            // 000000000064: BF9F0000
+  s_code_end                                            // 000000000068: BF9F0000
+  s_code_end                                            // 00000000006C: BF9F0000
+  s_code_end                                            // 000000000070: BF9F0000
+  s_code_end                                            // 000000000074: BF9F0000
+  s_code_end                                            // 000000000078: BF9F0000
+  s_code_end                                            // 00000000007C: BF9F0000
+  s_code_end                                            // 000000000080: BF9F0000
+  s_code_end                                            // 000000000084: BF9F0000
+  s_code_end                                            // 000000000088: BF9F0000
+  s_code_end                                            // 00000000008C: BF9F0000
+  s_code_end                                            // 000000000090: BF9F0000
+  s_code_end                                            // 000000000094: BF9F0000
+  s_code_end                                            // 000000000098: BF9F0000
+  s_code_end                                            // 00000000009C: BF9F0000
+  s_code_end                                            // 0000000000A0: BF9F0000
+  s_code_end                                            // 0000000000A4: BF9F0000
+  s_code_end                                            // 0000000000A8: BF9F0000
+  s_code_end                                            // 0000000000AC: BF9F0000
+  s_code_end                                            // 0000000000B0: BF9F0000
+  s_code_end                                            // 0000000000B4: BF9F0000
+  s_code_end                                            // 0000000000B8: BF9F0000
+  s_code_end                                            // 0000000000BC: BF9F0000
+  s_code_end                                            // 0000000000C0: BF9F0000
+  s_code_end                                            // 0000000000C4: BF9F0000
+  s_code_end                                            // 0000000000C8: BF9F0000
+  s_code_end                                            // 0000000000CC: BF9F0000
+  s_code_end                                            // 0000000000D0: BF9F0000
+  s_code_end                                            // 0000000000D4: BF9F0000
+  s_code_end                                            // 0000000000D8: BF9F0000
+  s_code_end                                            // 0000000000DC: BF9F0000
+  s_code_end                                            // 0000000000E0: BF9F0000
+  s_code_end                                            // 0000000000E4: BF9F0000
+  s_code_end                                            // 0000000000E8: BF9F0000
+  s_code_end                                            // 0000000000EC: BF9F0000
+  s_code_end                                            // 0000000000F0: BF9F0000
+  s_code_end                                            // 0000000000F4: BF9F0000
+  s_code_end                                            // 0000000000F8: BF9F0000
+  s_code_end                                            // 0000000000FC: BF9F0000
+  s_code_end                                            // 000000000100: BF9F0000
+  s_code_end                                            // 000000000104: BF9F0000
+  s_code_end                                            // 000000000108: BF9F0000
+  s_code_end                                            // 00000000010C: BF9F0000
+  s_code_end                                            // 000000000110: BF9F0000
+  s_code_end                                            // 000000000114: BF9F0000
+  s_code_end                                            // 000000000118: BF9F0000
+  s_code_end                                            // 00000000011C: BF9F0000
+  s_code_end                                            // 000000000120: BF9F0000
+  s_code_end                                            // 000000000124: BF9F0000
+  s_code_end                                            // 000000000128: BF9F0000
+  s_code_end                                            // 00000000012C: BF9F0000
+  s_code_end                                            // 000000000130: BF9F0000
+  s_code_end                                            // 000000000134: BF9F0000
+  s_code_end                                            // 000000000138: BF9F0000
+  s_code_end                                            // 00000000013C: BF9F0000
+  s_code_end                                            // 000000000140: BF9F0000
+  s_code_end                                            // 000000000144: BF9F0000
+  s_code_end                                            // 000000000148: BF9F0000
+  s_code_end                                            // 00000000014C: BF9F0000
+  s_code_end                                            // 000000000150: BF9F0000
+  s_code_end                                            // 000000000154: BF9F0000
+  s_code_end                                            // 000000000158: BF9F0000
+end
+

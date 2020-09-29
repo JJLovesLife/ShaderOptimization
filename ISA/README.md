@@ -11,3 +11,4 @@ rga version: 2.3.1.0
 |HelloPipeline|Basis graphics pipeline. First look on how basis shader is executed in GPU.|
 |AttributeInterpolation|Pixel shader input interpolation.|
 |BasicTexture|How texture sample works.|
+|CS&RWTexture|How compute shader and RWTexture works.|
