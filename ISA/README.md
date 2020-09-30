@@ -12,3 +12,4 @@ rga version: 2.3.1.0
 |AttributeInterpolation|Pixel shader input interpolation.|
 |BasicTexture|How texture sample works.|
 |CS&RWTexture|How compute shader and RWTexture works.|
+|GroupShared|How groupshared variable works in ISA.|
